@@ -2,11 +2,11 @@
   import { onMount } from 'svelte';
 
   const images = [
-    "https://images.unsplash.com/photo-1594035910387-fea4779426e9?q=80&w=400&auto=format&fit=crop", // Perfume
-    "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=400&auto=format&fit=crop", // Tube
-    "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=400&auto=format&fit=crop", // Ring/Blue
-    "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=400&auto=format&fit=crop", // Interior
-    "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"  // Stretching
+    "/generated/image-passionate-football-fans-celebrating-in--1765987877113-0.webp", // Fans celebrating
+    "/generated/image-close-up-of-a-fans-hand-holding-a-smartp-1765987895176-1.webp", // Fan with phone
+    "/generated/image-football-player-celebrating-a-goal-with--1765987912989-2.webp", // Player celebrating
+    "/generated/image-wide-shot-of-a-modern-football-stadium-a-1765987924169-3.webp", // Stadium at night
+    "/generated/image-young-diverse-group-of-friends-watching--1765987941397-4.webp"  // Friends watching
   ];
 
   let showCookieBanner = $state(true);
@@ -15,14 +15,11 @@
 <div class="font-sans text-[#111] antialiased bg-white selection:bg-black selection:text-white">
   <!-- Header -->
   <header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-5 bg-white/90 backdrop-blur-sm">
-    <div class="text-xl font-medium tracking-tight">New Generation</div>
+    <div class="text-xl font-medium tracking-tight">FanLayer</div>
     <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-      <a href="#" class="flex items-center gap-1.5">
-        <span class="bg-black text-white text-[10px] font-bold px-1.5 py-0.5 rounded-sm">NEW</span>
-        Kepler
-      </a>
-      <a href="#" class="hover:opacity-70 transition-opacity">Developer</a>
-      <a href="#" class="hover:opacity-70 transition-opacity">Work with us</a>
+      <a href="#" class="hover:opacity-70 transition-opacity">Platform</a>
+      <a href="#" class="hover:opacity-70 transition-opacity">For Clubs</a>
+      <a href="#" class="hover:opacity-70 transition-opacity">For Fans</a>
       <a href="#" class="hover:opacity-70 transition-opacity">Blog</a>
     </nav>
   </header>
@@ -31,11 +28,11 @@
   <section class="pt-40 pb-20 px-6 max-w-[1400px] mx-auto">
     <div class="max-w-4xl mb-24">
       <h1 class="text-6xl md:text-7xl font-medium tracking-tight leading-[1.1] mb-8">
-        A new kind of AI<br>for commerce
+        ChatGPT for Sports.<br>Your AI fan companion.
       </h1>
       <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
         <p class="text-lg md:text-xl max-w-md leading-relaxed text-gray-800">
-          Deliver AI-native commerce experiences across chat, agents, and generative interfaces.
+          Transform fragmented sports experiences into personalized AI conversations. Monetize fan data while delivering the engagement fans crave.
         </p>
         <button class="bg-black text-white px-6 py-3 text-sm font-medium rounded-sm hover:bg-gray-800 transition-colors">
           Request demo
@@ -47,7 +44,7 @@
     <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
       {#each images as src, i}
         <div class="aspect-[3/4] overflow-hidden bg-gray-100 rounded-sm">
-          <img {src} alt="Commerce item {i}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+          <img {src} alt="Sports fan experience {i}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
         </div>
       {/each}
     </div>
@@ -57,52 +54,52 @@
   <section class="py-32 px-6 max-w-[1400px] mx-auto relative min-h-[800px]">
     <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
       <h2 class="text-2xl md:text-3xl font-medium text-center max-w-2xl leading-snug bg-white/80 backdrop-blur-sm p-4 rounded-xl">
-        Transform your online store into an AI-native commerce platform, for both humans and their agents.
+        One AI conversation replaces 10+ apps. Give fans the unified experience they deserve.
       </h2>
     </div>
 
-    <!-- Scattered Images with 'Add to cart' -->
+    <!-- Scattered Images with interactive elements -->
     <div class="relative w-full h-full min-h-[800px]">
-      <!-- Image 1: Tube (Left) -->
+      <!-- Image 1: Fan with jersey (Left) -->
       <div class="absolute top-20 left-[10%] w-64 aspect-[3/4]">
-        <img src={images[1]} alt="Tube" class="w-full h-full object-cover rounded-sm shadow-lg" />
+        <img src="/generated/image-fan-wearing-team-jersey-using-smartphone-1765987951685-5.webp" alt="Fan with smartphone" class="w-full h-full object-cover rounded-sm shadow-lg" />
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
              <div class="w-3 h-3 bg-white rounded-full mx-auto mb-2 animate-pulse"></div>
-             <button class="bg-white/90 backdrop-blur text-xs px-3 py-1.5 rounded-full shadow-sm whitespace-nowrap hover:bg-white transition-colors">Add to cart</button>
+             <button class="bg-white/90 backdrop-blur text-xs px-3 py-1.5 rounded-full shadow-sm whitespace-nowrap hover:bg-white transition-colors">Ask AI</button>
         </div>
       </div>
 
-      <!-- Image 2: Interior (Center Top) -->
-      <div class="absolute top-0 left-[45%] w-56 aspect-[3/4]">
-        <img src={images[3]} alt="Interior" class="w-full h-full object-cover rounded-sm shadow-lg" />
+      <!-- Image 2: Stadium aerial (Center Top) -->
+      <div class="absolute top-0 left-[45%] w-56 aspect-video">
+        <img src="/generated/image-aerial-view-of-a-football-stadium-during-1765987956566-6.webp" alt="Stadium aerial view" class="w-full h-full object-cover rounded-sm shadow-lg" />
         <div class="absolute top-1/3 left-1/3">
              <div class="w-3 h-3 bg-white rounded-full mb-2 animate-pulse"></div>
-             <button class="bg-white/90 backdrop-blur text-xs px-3 py-1.5 rounded-full shadow-sm whitespace-nowrap hover:bg-white transition-colors">Add to cart</button>
+             <button class="bg-white/90 backdrop-blur text-xs px-3 py-1.5 rounded-full shadow-sm whitespace-nowrap hover:bg-white transition-colors">Live Stats</button>
         </div>
       </div>
 
-       <!-- Image 3: Stretching (Right Top) -->
+       <!-- Image 3: Analytics dashboard (Right Top) -->
       <div class="absolute top-40 right-[5%] w-80 aspect-video">
-        <img src={images[4]} alt="Stretching" class="w-full h-full object-cover rounded-sm shadow-lg" />
+        <img src="/generated/image-sports-analytics-dashboard-on-a-laptop-s-1765987968443-8.webp" alt="Analytics dashboard" class="w-full h-full object-cover rounded-sm shadow-lg" />
         <div class="absolute bottom-1/3 right-1/3">
              <div class="w-3 h-3 bg-white rounded-full mb-2 animate-pulse ml-auto"></div>
-             <button class="bg-white/90 backdrop-blur text-xs px-3 py-1.5 rounded-full shadow-sm whitespace-nowrap hover:bg-white transition-colors">Add to cart</button>
+             <button class="bg-white/90 backdrop-blur text-xs px-3 py-1.5 rounded-full shadow-sm whitespace-nowrap hover:bg-white transition-colors">Get Insights</button>
         </div>
       </div>
 
-      <!-- Image 4: Perfume (Left Bottom) -->
+      <!-- Image 4: Excited fans (Left Bottom) -->
       <div class="absolute bottom-20 left-[5%] w-56 aspect-[3/4]">
-        <img src={images[0]} alt="Perfume" class="w-full h-full object-cover rounded-sm shadow-lg" />
+        <img src="/generated/image-close-up-of-excited-fans-faces-painted-i-1765987962997-7.webp" alt="Excited fans" class="w-full h-full object-cover rounded-sm shadow-lg" />
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-             <button class="bg-white/90 backdrop-blur text-xs px-3 py-1.5 rounded-full shadow-sm whitespace-nowrap hover:bg-white transition-colors">Add to cart</button>
+             <button class="bg-white/90 backdrop-blur text-xs px-3 py-1.5 rounded-full shadow-sm whitespace-nowrap hover:bg-white transition-colors">Match Updates</button>
         </div>
       </div>
 
-      <!-- Image 5: Ring (Center Bottom) -->
+      <!-- Image 5: Fans with phones (Center Bottom) -->
       <div class="absolute bottom-0 left-[35%] w-48 aspect-[3/4]">
-        <img src={images[2]} alt="Ring" class="w-full h-full object-cover rounded-sm shadow-lg" />
+        <img src="/generated/image-football-fans-in-stadium-seats-checking--1765987976093-9.webp" alt="Fans checking phones" class="w-full h-full object-cover rounded-sm shadow-lg" />
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-             <button class="bg-white/90 backdrop-blur text-xs px-3 py-1.5 rounded-full shadow-sm whitespace-nowrap hover:bg-white transition-colors">Add to cart</button>
+             <button class="bg-white/90 backdrop-blur text-xs px-3 py-1.5 rounded-full shadow-sm whitespace-nowrap hover:bg-white transition-colors">Team News</button>
         </div>
       </div>
     </div>
@@ -113,33 +110,33 @@
     <div class="max-w-[1400px] mx-auto">
       <div class="flex flex-col md:flex-row justify-between items-start mb-20 gap-8">
         <h2 class="text-4xl md:text-5xl font-medium tracking-tight max-w-xl">
-          Natural language,<br>generative experiences
+          Ask anything.<br>Get instant answers.
         </h2>
         <p class="text-gray-400 text-lg max-w-md leading-relaxed">
-          Let customers ask for what they want in their own words and generate real-time experiences tailored to their intent and context.
+          Fans ask questions in their own words. FanLayer delivers real-time insights powered by exclusive rights holder data and AI.
         </p>
       </div>
 
       <!-- Interactive Box -->
       <div class="w-full aspect-video bg-[#1a1a1a] rounded-sm mb-16 flex items-center justify-center relative overflow-hidden group">
-        <div class="text-5xl md:text-7xl font-light tracking-tight text-white/90">
-          Affordab<span class="animate-pulse">|</span>
+        <div class="text-4xl md:text-6xl font-light tracking-tight text-white/90">
+          Who scored in the last<span class="animate-pulse">|</span>
         </div>
         <!-- Subtle grid or gradient could go here -->
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-white/10 pt-12">
         <div>
-          <h3 class="text-lg font-medium mb-3">Invite conversation</h3>
-          <p class="text-gray-400 leading-relaxed">Let customers search with natural language.</p>
+          <h3 class="text-lg font-medium mb-3">Natural conversation</h3>
+          <p class="text-gray-400 leading-relaxed">Fans ask questions like they would a friend.</p>
         </div>
         <div>
-          <h3 class="text-lg font-medium mb-3">Generate on demand</h3>
-          <p class="text-gray-400 leading-relaxed">Instantly assemble products, images, and content.</p>
+          <h3 class="text-lg font-medium mb-3">Real-time intelligence</h3>
+          <p class="text-gray-400 leading-relaxed">Live match insights, injury updates, lineup predictions.</p>
         </div>
         <div>
-          <h3 class="text-lg font-medium mb-3">Always on brand</h3>
-          <p class="text-gray-400 leading-relaxed">Responsive experiences that stay true to your brand.</p>
+          <h3 class="text-lg font-medium mb-3">Personalized for each fan</h3>
+          <p class="text-gray-400 leading-relaxed">Tailored responses based on team loyalty and preferences.</p>
         </div>
       </div>
     </div>
@@ -150,17 +147,17 @@
     <div class="max-w-[1400px] mx-auto">
       <div class="flex flex-col md:flex-row justify-between items-start mb-20 gap-8">
         <h2 class="text-4xl md:text-5xl font-medium tracking-tight">
-          Connect your catalog to AI
+          Monetize your<br>fan data goldmine
         </h2>
         <p class="text-gray-400 text-lg max-w-md leading-relaxed">
-          Customers are discovering and buying through AI. New Gen ensures your products are ready.
+          Rights holders sit on valuable content and data they can't monetize. FanLayer unlocks digital revenue while deepening fan relationships.
         </p>
       </div>
 
       <!-- Interactive Box -->
       <div class="w-full aspect-[2/1] bg-[#1a1a1a] rounded-sm flex items-center justify-center">
-         <div class="text-5xl md:text-7xl font-light tracking-tight text-white/90">
-          Wh<span class="animate-pulse">|</span>
+         <div class="text-4xl md:text-6xl font-light tracking-tight text-white/90">
+          Show me team tactic<span class="animate-pulse">|</span>
         </div>
       </div>
     </div>
@@ -170,29 +167,29 @@
   <section class="bg-[#f5f5f5] py-24 px-6">
     <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
       <div>
-        <h3 class="text-lg font-medium mb-3 text-[#111]">Answer in AI chat</h3>
-        <p class="text-gray-600 leading-relaxed">Connect your catalog to AI conversations.</p>
+        <h3 class="text-lg font-medium mb-3 text-[#111]">Own fan relationships</h3>
+        <p class="text-gray-600 leading-relaxed">Direct connections instead of relying on social platforms as intermediaries.</p>
       </div>
       <div>
-        <h3 class="text-lg font-medium mb-3 text-[#111]">Prepare for agentic commerce</h3>
-        <p class="text-gray-600 leading-relaxed">Enable programmatic connections for agentic checkout.</p>
+        <h3 class="text-lg font-medium mb-3 text-[#111]">Unlock revenue streams</h3>
+        <p class="text-gray-600 leading-relaxed">B2C subscriptions, B2B licensing, and sponsored AI interactions.</p>
       </div>
       <div>
-        <h3 class="text-lg font-medium mb-3 text-[#111]">Be discoverable at scale</h3>
-        <p class="text-gray-600 leading-relaxed">Reach high-intent shoppers through AI-driven traffic.</p>
+        <h3 class="text-lg font-medium mb-3 text-[#111]">Engage fans 24/7</h3>
+        <p class="text-gray-600 leading-relaxed">AI-powered conversations that never sleep, in multiple languages.</p>
       </div>
     </div>
   </section>
 
-  <!-- Built for Generative Commerce -->
+  <!-- Built for Sports Fans -->
   <section class="bg-[#f0f0f0] py-32 px-6">
     <div class="max-w-[1400px] mx-auto">
       <div class="mb-16">
         <h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-6 text-[#111]">
-          Built for generative commerce
+          Built for the AI era of sports
         </h2>
         <p class="text-gray-600 text-lg max-w-2xl leading-relaxed">
-          New Gen combines your product data with AI-native generation to create content, interfaces, and insights tailored for how people shop in the AI era.
+          FanLayer combines exclusive rights holder data with AI-native generation to create personalized experiences that transform how fans engage with their favorite teams.
         </p>
       </div>
 
@@ -218,16 +215,16 @@
         <!-- List -->
         <div class="space-y-12 pt-4">
           <div class="group cursor-pointer">
-            <h3 class="text-xl font-medium mb-3 text-[#111]">Generate premium content</h3>
-            <p class="text-gray-600 leading-relaxed">Use your product data, brand voice, and cultural context to create rich, relevant content.</p>
+            <h3 class="text-xl font-medium mb-3 text-[#111]">Trained on exclusive data</h3>
+            <p class="text-gray-600 leading-relaxed">Historical matches, player performance, tactical analysis from rights holders creates unmatched accuracy.</p>
           </div>
           <div class="group cursor-pointer opacity-40 hover:opacity-100 transition-opacity">
-            <h3 class="text-xl font-medium mb-3 text-[#111]">Understand real intent</h3>
-            <p class="text-gray-600 leading-relaxed">Get deeper insight into how customers think and search — powered by data from real conversations.</p>
+            <h3 class="text-xl font-medium mb-3 text-[#111]">Understand fan intent</h3>
+            <p class="text-gray-600 leading-relaxed">Deep insights into what fans want — powered by real conversations and engagement patterns.</p>
           </div>
           <div class="group cursor-pointer opacity-40 hover:opacity-100 transition-opacity">
-            <h3 class="text-xl font-medium mb-3 text-[#111]">Automate with control</h3>
-            <p class="text-gray-600 leading-relaxed">Streamline tagging, merchandising, and copy without sacrificing curation.</p>
+            <h3 class="text-xl font-medium mb-3 text-[#111]">Integrated commerce layer</h3>
+            <p class="text-gray-600 leading-relaxed">Tickets, merchandise, and premium content — all without leaving the conversation.</p>
           </div>
 
           <div class="flex gap-4 pt-8">
@@ -243,7 +240,7 @@
   <section class="bg-[#fffcf8] py-32 px-6">
     <div class="max-w-[1400px] mx-auto">
       <h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-20 text-[#111]">
-        Fast to launch, easy to scale
+        From pilot to scale in months
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -254,8 +251,8 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
             </svg>
           </div>
-          <h3 class="text-lg font-medium mb-3 text-[#111]">Instant activation</h3>
-          <p class="text-gray-600 leading-relaxed">Launch an AI subdomain in one click to handle AI-driven traffic.</p>
+          <h3 class="text-lg font-medium mb-3 text-[#111]">Rapid deployment</h3>
+          <p class="text-gray-600 leading-relaxed">MVP launch with 3 league partnerships and 100K early adopters in Q1-Q2 2026.</p>
         </div>
 
         <!-- Card 2 -->
@@ -265,19 +262,19 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
             </svg>
           </div>
-          <h3 class="text-lg font-medium mb-3 text-[#111]">Adaptable approach</h3>
-          <p class="text-gray-600 leading-relaxed">Use for campaigns, experiments, or your full site.</p>
+          <h3 class="text-lg font-medium mb-3 text-[#111]">Multi-sport expansion</h3>
+          <p class="text-gray-600 leading-relaxed">Football first, then e-sports and multi-sport platform by 2027.</p>
         </div>
 
         <!-- Card 3 -->
         <div>
           <div class="w-14 h-14 bg-[#111] text-white flex items-center justify-center rounded-sm mb-8">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
             </svg>
           </div>
-          <h3 class="text-lg font-medium mb-3 text-[#111]">Effortless integration</h3>
-          <p class="text-gray-600 leading-relaxed">Plug into your setup — no engineering lift needed.</p>
+          <h3 class="text-lg font-medium mb-3 text-[#111]">Global reach</h3>
+          <p class="text-gray-600 leading-relaxed">Multi-language support serving fans worldwide from day one.</p>
         </div>
       </div>
     </div>
@@ -293,10 +290,10 @@
            <div class="w-2 bg-black h-full"></div>
            <div class="w-2 bg-black h-full opacity-50"></div>
         </div>
-        <h2 class="text-2xl md:text-3xl font-medium tracking-tight">Would you like to see a demo?</h2>
+        <h2 class="text-2xl md:text-3xl font-medium tracking-tight">Ready to transform your fan experience?</h2>
       </div>
       <button class="bg-black text-white px-8 py-3 text-sm font-medium rounded-sm hover:bg-gray-800 transition-colors whitespace-nowrap">
-        Yes, sign me up
+        Request demo
       </button>
     </div>
   </section>
@@ -306,14 +303,14 @@
     <div class="max-w-[1400px] mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-24 mb-20">
         <div class="col-span-1 md:col-span-2">
-          <h3 class="text-xl font-medium mb-1">New Generation</h3>
-          <p class="text-gray-500 text-lg">AI-Native Commerce</p>
+          <h3 class="text-xl font-medium mb-1">FanLayer</h3>
+          <p class="text-gray-500 text-lg">ChatGPT for Sports</p>
         </div>
 
         <div>
           <ul class="space-y-4 text-sm font-medium">
             <li><a href="#" class="hover:underline">Get in touch</a></li>
-            <li><a href="#" class="hover:underline">Work with us</a></li>
+            <li><a href="#" class="hover:underline">For Clubs</a></li>
             <li><a href="#" class="hover:underline">Read our Blog</a></li>
           </ul>
         </div>
@@ -328,8 +325,8 @@
 
       <div class="flex flex-col md:flex-row justify-between items-end text-[10px] text-gray-400 uppercase tracking-wider gap-4">
         <div class="flex gap-8">
-          <span>New Generation 2025</span>
-          <span>Designed with Bakken & Baeck</span>
+          <span>FanLayer 2025</span>
+          <span>Backed by Werner Vogels (Amazon CTO)</span>
         </div>
         <div class="flex gap-8">
           <a href="#" class="hover:text-gray-600">Terms of use</a>
